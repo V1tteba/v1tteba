@@ -438,11 +438,15 @@ color: white;
 
 .galeria {
     display: grid;
-    grid-column: auto;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 .galeria a {
     display: flex;
     justify-content: center;
